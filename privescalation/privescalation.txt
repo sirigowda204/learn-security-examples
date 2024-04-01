@@ -1,0 +1,14 @@
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+The vulnerability arises from the lack of proper authentication. The server only checks the user's role without verifying their identity, allowing potential privilege escalation.
+
+Secure Version (secure.js):
+The secure version prevents this vulnerability by implementing session-based authentication, ensuring the user's identity is verified before allowing role updates.
+
+Additional Security Mechanisms:
+To further enhance security:
+
+Implement secure password storage.
+Use HTTPS for data encryption.
+Apply role-based access control (RBAC).
+Implement input validation and sanitization.

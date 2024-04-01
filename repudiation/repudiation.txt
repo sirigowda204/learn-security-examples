@@ -1,2 +1,17 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+In the insecure version, the server allows users to send messages without any authentication. This means users can deny their actions since there's no way to trace who sent which message.
+
+Secure Version (secure.js):
+The secure version addresses this vulnerability by implementing request logging. Whenever a message is sent, the server logs the user who sent the message along with the message content. This ensures accountability and prevents users from denying their actions.
+
+Additional Security Mechanisms:
+To prevent such attacks and enhance security further:
+
+Implement user authentication to verify the identity of users sending messages.
+Use encryption techniques to secure message transmission between client and server.
+Implement digital signatures or checksums to ensure message integrity and authenticity.
+Implement access control mechanisms to restrict message retrieval to authorized users only.

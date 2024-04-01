@@ -1,2 +1,17 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+The vulnerability lies in directly using user-provided values in the MongoDB query, making it susceptible to NoSQL injection attacks, potentially leading to server overload.
+
+Secure Version (secure.js):
+The secure version handles errors gracefully, preventing the server from crashing when encountering unexpected input.
+
+Additional Security Mechanisms:
+To prevent such attacks:
+
+Implement rate limiting.
+Apply authentication and authorization.
+Validate incoming requests.
+Monitor server performance and scalability.

@@ -1,3 +1,19 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+Using user-provided values directly in the MongoDB query exposes the server to NoSQL injection attacks, enabling attackers to access unauthorized data.
+
+Secure Version (secure.js):
+The secure version validates and sanitizes user input before querying the database, preventing NoSQL injection attacks.
+
+CIA Property Violation:
+Tampering Violates:
+Confidentiality: Tampering compromises data confidentiality by potentially exposing sensitive information.
+Additional Security Mechanisms:
+Implement parameterized queries or ORM libraries.
+Enforce strict access controls and authentication.
+Implement logging and monitoring systems.
+Regularly update dependencies.
