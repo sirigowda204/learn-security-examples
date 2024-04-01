@@ -1,0 +1,10 @@
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+The vulnerability arises due to lack of input sanitization, allowing malicious script injection. This enables cross-site scripting (XSS) attacks, executing arbitrary JavaScript in users' browsers.
+
+Secure Version (secure.js):
+The secure version prevents this by sanitizing input before storing it in the session, thereby neutralizing XSS attacks.
+
+CIA Property Violation:
+Tampering Violates:
+Integrity: Tampering undermines data integrity by permitting unauthorized modifications, as seen in the injection of malicious scripts.
