@@ -1,1 +1,22 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+Vulnerability Explanation:
+Insecure Version (insecure.js):
+The vulnerability lies in allowing session cookies to be accessed by client-side JavaScript (httpOnly set to false), enabling session hijacking via XSS. Additionally, the absence of the sameSite flag exposes the application to CSRF attacks.
+
+Secure Version (secure.js):
+The secure version addresses these vulnerabilities by setting httpOnly to true, preventing client-side JavaScript from accessing session cookies, and enabling the sameSite flag to mitigate CSRF risks.
+
+CIA Properties Violation:
+Spoofing Violates:
+Confidentiality: Spoofing compromises user data confidentiality by allowing unauthorized access.
+
+Integrity: Spoofing undermines data integrity as attackers can manipulate or forge requests.
+
+Availability: Although not directly, spoofing can lead to further security breaches, potentially impacting system availability.
+
+
+
+
+
+
